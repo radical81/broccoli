@@ -1,10 +1,3 @@
-//
-//  StringTests.swift
-//  BroccoliTests
-//
-//  Created by Rex Jason Alobba on 9/11/2023.
-//
-
 import XCTest
 @testable import Broccoli
 
