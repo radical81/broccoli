@@ -11,6 +11,8 @@ struct SignUpView: View {
     Button("Submit") {
       
     }
+    .buttonStyle(.borderedProminent)
+    .tint(.darkGreen)
   }
   
   var nameField: some View {
