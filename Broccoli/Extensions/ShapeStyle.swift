@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Extends shape style with different colours.
 extension ShapeStyle where Self == Color {
   static var easyGreen: Color {
     Color(red: 200/255, green: 236/255, blue: 226/255)
