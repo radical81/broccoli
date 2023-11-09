@@ -8,7 +8,7 @@ struct SignUpView: View {
     VStack {
       form
     }
-    Button("Submit") {
+    Button("Send") {
       
     }
     .buttonStyle(.borderedProminent)
