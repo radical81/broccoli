@@ -3,6 +3,7 @@ import SwiftUI
 struct SignUpView: View {
   @State var name: String = ""
   @State var email: String = ""
+  @State var confirmEmail: String = ""
   
   var body: some View {
     VStack {
@@ -36,12 +37,23 @@ struct SignUpView: View {
     }
   }
 
+  var confirmEmailField: some View {
+    HStack {
+      Label("", systemImage: "envelope")
+        .accessibilityIdentifier("confirmEmailTextFieldLabel")
+      Spacer()
+      TextField("Confirm Email", text: $confirmEmail)
+        .accessibilityIdentifier("confirmEmailTextField")
+    }
+  }
+  
   var form: some View {
     VStack(alignment: .leading) {
       Text("Request an invite")
         .font(.headline)
       nameField
       emailField
+      confirmEmailField
     }
     .padding()
     .frame(maxWidth: 300)
