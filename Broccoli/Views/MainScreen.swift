@@ -9,11 +9,13 @@ struct MainScreen: View {
       Text("Broccoli & Co.")
         .font(.largeTitle)
         .foregroundColor(.darkGreen)
+        .accessibilityIdentifier("mainHeading")
       Button("Request an invite") {
         presentInvite.toggle()
       }
       .buttonStyle(.borderedProminent)
       .tint(.darkGreen)
+      .accessibilityIdentifier("requestInviteButton")
       Spacer()
     }
     .sheet(isPresented: $presentInvite) {
