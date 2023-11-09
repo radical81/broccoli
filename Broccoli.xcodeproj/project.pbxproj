@@ -16,6 +16,8 @@
 		8614FB162AFB32F000B5E112 /* ShapeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB152AFB32F000B5E112 /* ShapeStyle.swift */; };
 		8614FB182AFC911600B5E112 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB172AFC911600B5E112 /* String.swift */; };
 		8614FB1A2AFC91C300B5E112 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB192AFC91C300B5E112 /* StringTests.swift */; };
+		86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA0E2AFDA5F40099CA55 /* RequestInviteValidator.swift */; };
+		86A6EA112AFDA84A0099CA55 /* RequestInviteValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA102AFDA84A0099CA55 /* RequestInviteValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8614FB152AFB32F000B5E112 /* ShapeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStyle.swift; sourceTree = "<group>"; };
 		8614FB172AFC911600B5E112 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8614FB192AFC91C300B5E112 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		86A6EA0E2AFDA5F40099CA55 /* RequestInviteValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInviteValidator.swift; sourceTree = "<group>"; };
+		86A6EA102AFDA84A0099CA55 /* RequestInviteValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInviteValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		8614FAE62AFB2C4F00B5E112 /* Broccoli */ = {
 			isa = PBXGroup;
 			children = (
+				86A6EA0D2AFDA5DE0099CA55 /* Services */,
 				8614FB142AFB32CD00B5E112 /* Extensions */,
 				8614FB132AFB32C700B5E112 /* Views */,
 				8614FAE72AFB2C4F00B5E112 /* BroccoliApp.swift */,
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8614FB192AFC91C300B5E112 /* StringTests.swift */,
+				86A6EA102AFDA84A0099CA55 /* RequestInviteValidatorTests.swift */,
 			);
 			path = BroccoliTests;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 				8614FB172AFC911600B5E112 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86A6EA0D2AFDA5DE0099CA55 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				86A6EA0E2AFDA5F40099CA55 /* RequestInviteValidator.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +297,7 @@
 				8614FB122AFB2D1900B5E112 /* SignUpView.swift in Sources */,
 				8614FB182AFC911600B5E112 /* String.swift in Sources */,
 				8614FAE82AFB2C4F00B5E112 /* BroccoliApp.swift in Sources */,
+				86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */,
 				8614FB162AFB32F000B5E112 /* ShapeStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8614FB1A2AFC91C300B5E112 /* StringTests.swift in Sources */,
+				86A6EA112AFDA84A0099CA55 /* RequestInviteValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
