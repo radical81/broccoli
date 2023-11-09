@@ -31,7 +31,7 @@ struct SignUpView: View {
       Label("", systemImage: "envelope")
         .accessibilityIdentifier("emailTextFieldLabel")
       Spacer()
-      TextField("Email address", text: $email)
+      TextField("Email", text: $email)
         .accessibilityIdentifier("emailTextField")
     }
   }
