@@ -13,21 +13,26 @@ struct SignUpView: View {
     }
     .buttonStyle(.borderedProminent)
     .tint(.darkGreen)
+    .accessibilityIdentifier("sendButton")
   }
   
   var nameField: some View {
     HStack {
       Label("", systemImage: "person")
+        .accessibilityIdentifier("nameTextFieldLabel")
       Spacer()
       TextField("Name", text: $name)
+        .accessibilityIdentifier("nameTextField")
     }
   }
   
   var emailField: some View {
     HStack {
       Label("", systemImage: "envelope")
+        .accessibilityIdentifier("emailTextFieldLabel")
       Spacer()
       TextField("Email address", text: $email)
+        .accessibilityIdentifier("emailTextField")
     }
   }
 
