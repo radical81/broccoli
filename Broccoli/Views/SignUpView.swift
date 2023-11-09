@@ -6,7 +6,7 @@ struct SignUpView: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      Text("Sign up")
+      Text("Request an invite")
         .font(.headline)
       HStack {
         Label("", systemImage: "person")
