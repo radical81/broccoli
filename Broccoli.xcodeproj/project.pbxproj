@@ -11,7 +11,6 @@
 		8614FAEA2AFB2C4F00B5E112 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FAE92AFB2C4F00B5E112 /* MainScreen.swift */; };
 		8614FAEC2AFB2C5000B5E112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8614FAEB2AFB2C5000B5E112 /* Assets.xcassets */; };
 		8614FAEF2AFB2C5000B5E112 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8614FAEE2AFB2C5000B5E112 /* Preview Assets.xcassets */; };
-		8614FAF92AFB2C5100B5E112 /* BroccoliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FAF82AFB2C5100B5E112 /* BroccoliTests.swift */; };
 		8614FB032AFB2C5100B5E112 /* BroccoliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB022AFB2C5100B5E112 /* BroccoliUITests.swift */; };
 		8614FB052AFB2C5100B5E112 /* BroccoliUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB042AFB2C5100B5E112 /* BroccoliUITestsLaunchTests.swift */; };
 		8614FB122AFB2D1900B5E112 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB112AFB2D1900B5E112 /* SignUpView.swift */; };
@@ -44,7 +43,6 @@
 		8614FAEB2AFB2C5000B5E112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8614FAEE2AFB2C5000B5E112 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8614FAF42AFB2C5100B5E112 /* BroccoliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroccoliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8614FAF82AFB2C5100B5E112 /* BroccoliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroccoliTests.swift; sourceTree = "<group>"; };
 		8614FAFE2AFB2C5100B5E112 /* BroccoliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroccoliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8614FB022AFB2C5100B5E112 /* BroccoliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroccoliUITests.swift; sourceTree = "<group>"; };
 		8614FB042AFB2C5100B5E112 /* BroccoliUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroccoliUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		8614FAF72AFB2C5100B5E112 /* BroccoliTests */ = {
 			isa = PBXGroup;
 			children = (
-				8614FAF82AFB2C5100B5E112 /* BroccoliTests.swift */,
 				8614FB192AFC91C300B5E112 /* StringTests.swift */,
 			);
 			path = BroccoliTests;
@@ -298,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8614FB1A2AFC91C300B5E112 /* StringTests.swift in Sources */,
-				8614FAF92AFB2C5100B5E112 /* BroccoliTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
