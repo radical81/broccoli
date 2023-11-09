@@ -9,9 +9,6 @@ struct MainScreen: View {
         .font(.largeTitle)
         .foregroundColor(.darkGreen)
       SignUpView()
-      Button("Submit") {
-        
-      }
       .buttonStyle(.borderedProminent)
       .tint(.darkGreen)
       Spacer()

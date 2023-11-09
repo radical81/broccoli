@@ -5,27 +5,32 @@ struct SignUpView: View {
   @State var email: String = ""
 
   var body: some View {
-    VStack(alignment: .leading) {
-      Text("Request an invite")
-        .font(.headline)
-      HStack {
-        Label("", systemImage: "person")
-        Spacer()
-        TextField("Name", text: $name)
+    VStack {
+      VStack(alignment: .leading) {
+        Text("Request an invite")
+          .font(.headline)
+        HStack {
+          Label("", systemImage: "person")
+          Spacer()
+          TextField("Name", text: $name)
+        }
+        HStack {
+          Label("", systemImage: "envelope")
+          Spacer()
+          TextField("Email address", text: $email)
+          
+        }
       }
-      HStack {
-        Label("", systemImage: "envelope")
-        Spacer()
-        TextField("Email address", text: $email)
-
-      }
+      .padding()
+      .frame(maxWidth: 300)
+      .background(
+        RoundedRectangle(cornerRadius: 20)
+          .fill(.easyGreen)
+      )
     }
-    .padding()
-    .frame(maxWidth: 300)
-    .background(
-      RoundedRectangle(cornerRadius: 20)
-        .fill(.easyGreen)
-    )
+    Button("Submit") {
+      
+    }
   }
 }
 
