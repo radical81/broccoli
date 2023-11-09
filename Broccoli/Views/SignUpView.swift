@@ -21,7 +21,7 @@ struct SignUpView: View {
       Label("", systemImage: "person")
         .accessibilityIdentifier("nameTextFieldLabel")
       Spacer()
-      TextField("Name", text: $name)
+      TextField("Full Name", text: $name)
         .accessibilityIdentifier("nameTextField")
     }
   }
