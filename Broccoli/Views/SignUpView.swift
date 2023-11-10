@@ -5,10 +5,13 @@ struct SignUpView: View {
   // MARK: - Properties
   let registrar: Registration?
 
+  /// MARK: - Environment variables
+  @Environment(\.dismiss) private var dismiss
   // MARK: - State variables
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
+  @State var showSuccess: Bool = false
   @State var showErrors: Bool = false
   @State var dataForLoading: Loadable<Response> = .notLoaded
   
@@ -25,8 +28,18 @@ struct SignUpView: View {
       form
       sendButton
     }
+    .sheet(isPresented: $showSuccess, onDismiss: { dismiss() }) {
+      success
+    }
   }
   
+  /// Display success view
+  var success: some View {
+    Text("Registration successful!")
+      .font(.title)
+      .foregroundColor(.darkGreen)
+  }
+
   /// Display errors if any, after submitting the form.
   var errors: some View {
     VStack {
@@ -153,6 +166,12 @@ struct SignUpView: View {
       dataForLoading = .loading
       if let registrar = registrar {
         dataForLoading = await registrar.register(Person(name: name, email: email))
+        switch dataForLoading {
+        case .loaded(_):
+          showSuccess = true
+        default:
+          break
+        }
       }
     }
   }
