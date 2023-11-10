@@ -2,13 +2,16 @@ import SwiftUI
 
 /// This view displays the request for invite form.
 struct SignUpView: View {
+  // MARK: - Properties
+  let registrar: Registration?
+
   // MARK: - State variables
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
   @State var showErrors: Bool = false
   @State var dataForLoading: Loadable<Response> = .notLoaded
-
+  
   // MARK: - Computed Properties
   var validator: RequestInviteValidator {
     RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
@@ -102,7 +105,11 @@ struct SignUpView: View {
   
   /// Send button to send the data to the backend.
   var sendButton: some View {
-    Button(action: sendFormRequest) {
+    Button(action: {
+      Task {
+        await sendFormRequest()
+      }
+    }) {
       sendStatus
     }
     .buttonStyle(.borderedProminent)
@@ -128,16 +135,19 @@ struct SignUpView: View {
   
   // MARK: - Methods
   /// Send the form by calling the API.
-  func sendFormRequest() {
+  func sendFormRequest() async {
     showErrors = true
     if validator.isValidRequestAnInvite {
       dataForLoading = .loading
+      if let registrar = registrar {
+        dataForLoading = await registrar.register(Person(name: name, email: email))
+      }
     }
   }
 }
 
 struct SignUpView_Previews: PreviewProvider {
   static var previews: some View {
-    SignUpView()
+    SignUpView(registrar: nil)
   }
 }

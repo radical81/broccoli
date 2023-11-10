@@ -20,7 +20,7 @@ struct MainScreen: View {
       Spacer()
     }
     .sheet(isPresented: $presentInvite) {
-      SignUpView()
+      SignUpView(registrar: UserRegistration())
     }
   }
 }
