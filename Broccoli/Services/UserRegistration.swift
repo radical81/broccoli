@@ -9,6 +9,17 @@ struct UserRegistration: Registration {
     }
     var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
     request.httpMethod = "POST"
+    var encodedData: Data?
+    do {
+      encodedData = try JSONEncoder().encode(person)
+    } catch {
+      return .failed(APIError.missingRequestDetails("Name or email must be missing in the request payload."))
+    }
+    guard let encodedData = encodedData else {
+      return .failed(APIError.missingRequestDetails("Name or email must be missing in the request payload."))
+    }
+    request.httpBody = encodedData
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     let decoder = JSONDecoder()
     var dataResponse: (Data, URLResponse)?
     do {
