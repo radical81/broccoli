@@ -8,13 +8,8 @@ struct SignUpView: View {
   var body: some View {
     VStack {
       form
+      sendButton
     }
-    Button("Send") {
-      
-    }
-    .buttonStyle(.borderedProminent)
-    .tint(.darkGreen)
-    .accessibilityIdentifier("sendButton")
   }
   
   var nameField: some View {
@@ -61,6 +56,15 @@ struct SignUpView: View {
       RoundedRectangle(cornerRadius: 20)
         .fill(.easyGreen)
     )
+  }
+  
+  var sendButton: some View {
+    Button("Send") {
+      
+    }
+    .buttonStyle(.borderedProminent)
+    .tint(.darkGreen)
+    .accessibilityIdentifier("sendButton")
   }
 }
 
