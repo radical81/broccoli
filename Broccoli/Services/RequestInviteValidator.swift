@@ -22,12 +22,22 @@ struct RequestInviteValidator {
   }
   
   /// True if the email input is valid
-  func isValidEmailAddress(_ emailAddress: String) -> Bool {
-    emailAddress.isValidEmail
+  var isValidEmailAddress: Bool {
+    email.isValidEmail
+  }
+  
+  /// True if the confirm email input is valid
+  var isValidConfirmEmailAddress: Bool {
+    confirmEmail.isValidEmail
+  }
+  
+  /// True if the email addresses match.
+  var emailAddressesMatch: Bool {
+    email == confirmEmail
   }
   
   /// True if the request an invite input is valid
   var isValidRequestAnInvite: Bool {
-    isValidName && isValidEmailAddress(email) && isValidEmailAddress(confirmEmail) && email == confirmEmail
+    isValidName && isValidEmailAddress && isValidConfirmEmailAddress && emailAddressesMatch
   }
 }
