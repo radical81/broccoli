@@ -16,6 +16,11 @@ struct RequestInviteValidator {
   // Constants
   let minimumNameLength = 3
 
+  /// True if all fields are empty.
+  var allEmpty: Bool {
+    name.isEmpty && email.isEmpty && confirmEmail.isEmpty
+  }
+  
   /// True if the name input is valid
   var isValidName: Bool {
     name.hasMinimum(minimumNameLength)

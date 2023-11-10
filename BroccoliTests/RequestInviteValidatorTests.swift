@@ -13,5 +13,8 @@ final class RequestInviteValidatorTests: XCTestCase {
     XCTAssertFalse(request.isValidRequestAnInvite)
     request = RequestInviteValidator(name: "Rex", email: "rexabc.com", confirmEmail: "rexabc.com")
     XCTAssertFalse(request.isValidRequestAnInvite)
+    XCTAssertFalse(request.allEmpty)
+    request = RequestInviteValidator(name: "", email: "", confirmEmail: "")
+    XCTAssertTrue(request.allEmpty)
   }
 }
