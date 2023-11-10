@@ -102,12 +102,27 @@ struct SignUpView: View {
   
   /// Send button to send the data to the backend.
   var sendButton: some View {
-    Button("Send") {
-      sendFormRequest()
+    Button(action: sendFormRequest) {
+      sendStatus
     }
     .buttonStyle(.borderedProminent)
     .tint(.darkGreen)
     .accessibilityIdentifier("sendButton")
+  }
+  
+  /// Display status of sending the form.
+  @ViewBuilder
+  var sendStatus: some View {
+    switch dataForLoading {
+    case .notLoaded:
+      Text("Send")
+    case .loading:
+      Text("Sending...")
+        .font(.callout)
+        .foregroundColor(.white)
+    default:
+      Text("Send")
+    }
   }
   
   
@@ -116,7 +131,7 @@ struct SignUpView: View {
   func sendFormRequest() {
     showErrors = true
     if validator.isValidRequestAnInvite {
-      //TODO: Send to backend
+      dataForLoading = .loading
     }
   }
 }
