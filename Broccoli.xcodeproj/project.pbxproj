@@ -21,6 +21,8 @@
 		86A6EA132AFDAF1D0099CA55 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA122AFDAF1D0099CA55 /* ViewExtension.swift */; };
 		86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA172AFDB8FD0099CA55 /* Loadable.swift */; };
 		86A6EA1B2AFDBB9E0099CA55 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA1A2AFDBB9E0099CA55 /* Response.swift */; };
+		86A6EA1F2AFDC20F0099CA55 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA1E2AFDC20F0099CA55 /* Registration.swift */; };
+		86A6EA212AFDC2610099CA55 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA202AFDC2610099CA55 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		86A6EA152AFDB3060099CA55 /* swiftui-programmatic-views.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "swiftui-programmatic-views.md"; sourceTree = "<group>"; };
 		86A6EA172AFDB8FD0099CA55 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		86A6EA1A2AFDBB9E0099CA55 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		86A6EA1E2AFDC20F0099CA55 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		86A6EA202AFDC2610099CA55 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		8614FAE62AFB2C4F00B5E112 /* Broccoli */ = {
 			isa = PBXGroup;
 			children = (
+				86A6EA1D2AFDC1E80099CA55 /* Protocols */,
 				86A6EA192AFDBB7E0099CA55 /* Models */,
 				86A6EA142AFDB2E80099CA55 /* Architecture Decisions */,
 				86A6EA0D2AFDA5DE0099CA55 /* Services */,
@@ -194,8 +199,17 @@
 			isa = PBXGroup;
 			children = (
 				86A6EA1A2AFDBB9E0099CA55 /* Response.swift */,
+				86A6EA202AFDC2610099CA55 /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		86A6EA1D2AFDC1E80099CA55 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				86A6EA1E2AFDC20F0099CA55 /* Registration.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +346,12 @@
 				8614FB122AFB2D1900B5E112 /* SignUpView.swift in Sources */,
 				8614FB182AFC911600B5E112 /* StringExtension.swift in Sources */,
 				86A6EA132AFDAF1D0099CA55 /* ViewExtension.swift in Sources */,
+				86A6EA212AFDC2610099CA55 /* Person.swift in Sources */,
 				86A6EA1B2AFDBB9E0099CA55 /* Response.swift in Sources */,
 				8614FAE82AFB2C4F00B5E112 /* BroccoliApp.swift in Sources */,
 				86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */,
 				86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */,
+				86A6EA1F2AFDC20F0099CA55 /* Registration.swift in Sources */,
 				8614FB162AFB32F000B5E112 /* ShapeStyleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
