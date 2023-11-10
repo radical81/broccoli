@@ -64,7 +64,7 @@ struct HomeScreen: View {
   
   /// The cancellation button to cancel the invite.
   var cancelButton: some View {
-    Button("Cancel the invite") {
+    Button("Cancel invite") {
       presentCancelConfirm.toggle()
     }
     .buttonStyle(.borderedProminent)
