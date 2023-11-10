@@ -50,6 +50,16 @@ struct SignUpView: View {
           .font(.callout)
           .foregroundColor(.red)
       }
+      switch dataForLoading {
+      case .failed(let error):
+        if let apiError = error as? APIError {
+          Text(apiError.message)
+            .font(.callout)
+            .foregroundColor(.red)
+        }
+      default:
+        EmptyView()
+      }
     }
   }
 
