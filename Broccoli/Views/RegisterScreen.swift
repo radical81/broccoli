@@ -152,6 +152,11 @@ struct RegisterScreen: View {
   
   
   // MARK: - Methods
+  /// Mark the user as registered.
+  func registered() {
+    LocalStore.register()
+  }
+  
   /// Send the form by calling the API.
   func sendFormRequest() async {
     showErrors = true
@@ -162,6 +167,7 @@ struct RegisterScreen: View {
         switch dataForLoading {
         case .loaded(_):
           showSuccess = true
+          registered()
         default:
           break
         }

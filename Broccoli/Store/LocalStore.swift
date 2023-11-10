@@ -9,4 +9,9 @@ struct LocalStore {
   static var isRegistered: Bool {
      UserDefaults.standard.bool(forKey: key)
   }
+  
+  /// Mark the user as registered.
+  static func register() {
+    UserDefaults.standard.set(true, forKey: key)
+  }
 }
