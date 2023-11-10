@@ -4,6 +4,7 @@ import SwiftUI
 struct HomeScreen: View {
   @State var presentInvite: Bool = false
   @State var presentCancel: Bool = false
+  @State var refresh: Bool = false
 
   var body: some View {
     VStack(spacing: 20) {
@@ -16,9 +17,14 @@ struct HomeScreen: View {
       }
       Spacer()
     }
-    .sheet(isPresented: $presentInvite) {
+    .sheet(isPresented: $presentInvite, onDismiss: { refresh.toggle() }) {
       RegisterScreen(registrar: UserRegistration())
     }
+  }
+  
+  /// True if the user is registered.
+  var isRegistered: Bool {
+    LocalStore.isRegistered
   }
   
   /// The main home screen title.
