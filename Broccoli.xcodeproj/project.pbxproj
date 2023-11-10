@@ -54,6 +54,7 @@
 		86A6EA0E2AFDA5F40099CA55 /* RequestInviteValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInviteValidator.swift; sourceTree = "<group>"; };
 		86A6EA102AFDA84A0099CA55 /* RequestInviteValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInviteValidatorTests.swift; sourceTree = "<group>"; };
 		86A6EA122AFDAF1D0099CA55 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		86A6EA152AFDB3060099CA55 /* swiftui-programmatic-views.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "swiftui-programmatic-views.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		8614FAE62AFB2C4F00B5E112 /* Broccoli */ = {
 			isa = PBXGroup;
 			children = (
+				86A6EA142AFDB2E80099CA55 /* Architecture Decisions */,
 				86A6EA0D2AFDA5DE0099CA55 /* Services */,
 				8614FB142AFB32CD00B5E112 /* Extensions */,
 				8614FB132AFB32C700B5E112 /* Views */,
@@ -164,6 +166,14 @@
 				86A6EA0E2AFDA5F40099CA55 /* RequestInviteValidator.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		86A6EA142AFDB2E80099CA55 /* Architecture Decisions */ = {
+			isa = PBXGroup;
+			children = (
+				86A6EA152AFDB3060099CA55 /* swiftui-programmatic-views.md */,
+			);
+			path = "Architecture Decisions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
