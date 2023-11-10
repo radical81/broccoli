@@ -26,6 +26,7 @@
 		86A6EA232AFDC2CF0099CA55 /* UserRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA222AFDC2CF0099CA55 /* UserRegistration.swift */; };
 		86A6EA252AFDC3C10099CA55 /* ErrorWithMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA242AFDC3C10099CA55 /* ErrorWithMessage.swift */; };
 		86A6EA272AFDC42C0099CA55 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA262AFDC42C0099CA55 /* APIError.swift */; };
+		86A6EA2A2AFDFB3B0099CA55 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		86A6EA222AFDC2CF0099CA55 /* UserRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistration.swift; sourceTree = "<group>"; };
 		86A6EA242AFDC3C10099CA55 /* ErrorWithMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWithMessage.swift; sourceTree = "<group>"; };
 		86A6EA262AFDC42C0099CA55 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				86A6EA0D2AFDA5DE0099CA55 /* Services */,
 				86A6EA162AFDB8DE0099CA55 /* Enums */,
 				8614FB142AFB32CD00B5E112 /* Extensions */,
+				86A6EA282AFDFA6A0099CA55 /* Store */,
 				8614FB132AFB32C700B5E112 /* Views */,
 				8614FAE72AFB2C4F00B5E112 /* BroccoliApp.swift */,
 				8614FAEB2AFB2C5000B5E112 /* Assets.xcassets */,
@@ -219,6 +222,14 @@
 				86A6EA242AFDC3C10099CA55 /* ErrorWithMessage.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		86A6EA282AFDFA6A0099CA55 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				86A6EA212AFDC2610099CA55 /* Person.swift in Sources */,
 				86A6EA1B2AFDBB9E0099CA55 /* Response.swift in Sources */,
 				8614FAE82AFB2C4F00B5E112 /* BroccoliApp.swift in Sources */,
+				86A6EA2A2AFDFB3B0099CA55 /* LocalStore.swift in Sources */,
 				86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */,
 				86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */,
 				86A6EA1F2AFDC20F0099CA55 /* Registration.swift in Sources */,
