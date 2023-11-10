@@ -4,12 +4,15 @@ struct SignUpView: View {
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
+  @State var showErrors: Bool = false
+  
   var validator: RequestInviteValidator {
     RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
   }
   var body: some View {
     VStack {
       errors
+        .hideIf(!showErrors)
       form
       sendButton
     }
@@ -97,7 +100,7 @@ struct SignUpView: View {
   }
   
   func sendFormRequest() {
-    
+    showErrors = true
   }
 }
 
