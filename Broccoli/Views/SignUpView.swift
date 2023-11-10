@@ -101,6 +101,9 @@ struct SignUpView: View {
   
   func sendFormRequest() {
     showErrors = true
+    if validator.isValidRequestAnInvite {
+      //TODO: Send to backend
+    }
   }
 }
 
