@@ -22,10 +22,14 @@ struct UserRegistration: Registration {
       return .failed(APIError.network("Missing data from the API."))
     }
     if response.statusCode == 400 { // Bad request
-//      guard let response = try? decoder.decode(Response.self, from: data) else {
-//        return .failed(APIError.badRequest("Bad request, the service cannot handle this."))
-//      }
+      guard let responseDetails = try? decoder.decode(Response.self, from: data), let errorMessage = responseDetails.errorMessage else {
+        return .failed(APIError.badRequest("Bad request, the service cannot handle this."))
+      }
+      return .failed(APIError.badRequest(errorMessage))
     }
-    return .loading
+    guard let responseDetails = try? decoder.decode(Response.self, from: data), responseDetails.registered, response.statusCode == 200 else {
+      return .failed(APIError.registrationFail)
+    }
+    return .loaded(responseDetails)
   }
 }
