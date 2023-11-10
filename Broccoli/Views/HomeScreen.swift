@@ -13,7 +13,7 @@ struct HomeScreen: View {
       Spacer()
     }
     .sheet(isPresented: $presentInvite) {
-      Register(registrar: UserRegistration())
+      RegisterScreen(registrar: UserRegistration())
     }
   }
   
