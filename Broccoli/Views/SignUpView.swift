@@ -81,6 +81,7 @@ struct SignUpView: View {
         .accessibilityIdentifier("emailTextFieldLabel")
       Spacer()
       TextField("Email", text: $email)
+        .textInputAutocapitalization(.never)
         .accessibilityIdentifier("emailTextField")
     }
   }
@@ -92,6 +93,7 @@ struct SignUpView: View {
         .accessibilityIdentifier("confirmEmailTextFieldLabel")
       Spacer()
       TextField("Confirm Email", text: $confirmEmail)
+        .textInputAutocapitalization(.never)
         .accessibilityIdentifier("confirmEmailTextField")
     }
   }
