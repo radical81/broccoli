@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// This view represents the home screen.
 struct MainScreen: View {
   @State var presentInvite: Bool = false
 

@@ -1,19 +1,20 @@
 import SwiftUI
 
+/// This view displays the request for invite form.
 struct SignUpView: View {
-  // MARK:- State variables
+  // MARK: - State variables
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
   @State var showErrors: Bool = false
   @State var dataForLoading: Loadable<Response> = .notLoaded
 
-  // MARK:- Computed Properties
+  // MARK: - Computed Properties
   var validator: RequestInviteValidator {
     RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
   }
   
-  // MARK:- View
+  // MARK: - View
   var body: some View {
     VStack {
       errors
@@ -23,6 +24,7 @@ struct SignUpView: View {
     }
   }
   
+  /// Display errors if any, after submitting the form.
   var errors: some View {
     VStack {
       if !validator.isValidName {
@@ -48,6 +50,7 @@ struct SignUpView: View {
     }
   }
 
+  /// Name
   var nameField: some View {
     HStack {
       Label("", systemImage: "person")
@@ -58,6 +61,7 @@ struct SignUpView: View {
     }
   }
   
+  /// Email
   var emailField: some View {
     HStack {
       Label("", systemImage: "envelope")
@@ -68,6 +72,7 @@ struct SignUpView: View {
     }
   }
 
+  /// Confirm email, must match.
   var confirmEmailField: some View {
     HStack {
       Label("", systemImage: "envelope")
@@ -78,6 +83,7 @@ struct SignUpView: View {
     }
   }
   
+  /// The enclosing form.
   var form: some View {
     VStack(alignment: .leading) {
       Text("Request an invite")
@@ -94,6 +100,7 @@ struct SignUpView: View {
     )
   }
   
+  /// Send button to send the data to the backend.
   var sendButton: some View {
     Button("Send") {
       sendFormRequest()
@@ -104,7 +111,8 @@ struct SignUpView: View {
   }
   
   
-  // MARK:- Methods
+  // MARK: - Methods
+  /// Send the form by calling the API.
   func sendFormRequest() {
     showErrors = true
     if validator.isValidRequestAnInvite {
