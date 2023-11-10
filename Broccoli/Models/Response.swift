@@ -6,6 +6,14 @@ struct Response: Decodable {
   var registered: Bool
   /// Capture any error messages.
   var errorMessage: String?
+  
+  /// Use only in success scenarios
+  init(registered: Bool) {
+    self.registered = registered
+    self.errorMessage = nil
+  }
+  
+  /// Use to decode from JSON.
   init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     errorMessage = try values.decode(String.self, forKey: .errorMessage)
