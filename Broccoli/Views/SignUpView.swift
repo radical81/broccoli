@@ -6,7 +6,8 @@ struct SignUpView: View {
   @State var email: String = ""
   @State var confirmEmail: String = ""
   @State var showErrors: Bool = false
-  
+  @State var dataForLoading: Loadable<Response> = .notLoaded
+
   // MARK:- Computed Properties
   var validator: RequestInviteValidator {
     RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
@@ -101,6 +102,7 @@ struct SignUpView: View {
     .tint(.darkGreen)
     .accessibilityIdentifier("sendButton")
   }
+  
   
   // MARK:- Methods
   func sendFormRequest() {
