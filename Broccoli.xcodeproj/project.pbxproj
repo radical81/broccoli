@@ -20,6 +20,7 @@
 		86A6EA112AFDA84A0099CA55 /* RequestInviteValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA102AFDA84A0099CA55 /* RequestInviteValidatorTests.swift */; };
 		86A6EA132AFDAF1D0099CA55 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA122AFDAF1D0099CA55 /* ViewExtension.swift */; };
 		86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA172AFDB8FD0099CA55 /* Loadable.swift */; };
+		86A6EA1B2AFDBB9E0099CA55 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA1A2AFDBB9E0099CA55 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		86A6EA122AFDAF1D0099CA55 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		86A6EA152AFDB3060099CA55 /* swiftui-programmatic-views.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "swiftui-programmatic-views.md"; sourceTree = "<group>"; };
 		86A6EA172AFDB8FD0099CA55 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		86A6EA1A2AFDBB9E0099CA55 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		8614FAE62AFB2C4F00B5E112 /* Broccoli */ = {
 			isa = PBXGroup;
 			children = (
+				86A6EA192AFDBB7E0099CA55 /* Models */,
 				86A6EA142AFDB2E80099CA55 /* Architecture Decisions */,
 				86A6EA0D2AFDA5DE0099CA55 /* Services */,
 				86A6EA162AFDB8DE0099CA55 /* Enums */,
@@ -185,6 +188,14 @@
 				86A6EA172AFDB8FD0099CA55 /* Loadable.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		86A6EA192AFDBB7E0099CA55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86A6EA1A2AFDBB9E0099CA55 /* Response.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				8614FB122AFB2D1900B5E112 /* SignUpView.swift in Sources */,
 				8614FB182AFC911600B5E112 /* StringExtension.swift in Sources */,
 				86A6EA132AFDAF1D0099CA55 /* ViewExtension.swift in Sources */,
+				86A6EA1B2AFDBB9E0099CA55 /* Response.swift in Sources */,
 				8614FAE82AFB2C4F00B5E112 /* BroccoliApp.swift in Sources */,
 				86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */,
 				86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */,
