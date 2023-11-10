@@ -39,9 +39,9 @@ struct UserRegistration: Registration {
       }
       return .failed(APIError.badRequest(errorMessage))
     }
-    guard let responseDetails = try? decoder.decode(Response.self, from: data), responseDetails.registered, response.statusCode == 200 else {
+    guard response.statusCode == 200, let stringResponse = String(data: data, encoding: .utf8), stringResponse == "Registered" else {
       return .failed(APIError.registrationFail)
     }
-    return .loaded(responseDetails)
+    return .loaded(Response(registered: true))
   }
 }
