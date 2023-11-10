@@ -6,6 +6,9 @@ enum APIError: ErrorWithMessage {
   case network(String)
   /// Bad request
   case badRequest(String)
+  /// Registration still failed
+  case registrationFail
+  
   /// Retrieve the error messages
   var message: String {
     switch self {
@@ -15,6 +18,8 @@ enum APIError: ErrorWithMessage {
       return message
     case .badRequest(let message):
       return message
+    case .registrationFail:
+      return "Registation failed for unknown reasons."
     }
   }
 }
