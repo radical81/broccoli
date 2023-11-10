@@ -14,7 +14,7 @@ struct LocalStore {
   }
   
   /// Add email to registry.
-  static func addEmail(_ email: String) {
+  static func register(_ email: String) {
     var registered = registeredEmails
     if !registered.contains(email) {
       registered.append(email)
