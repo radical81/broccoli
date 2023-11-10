@@ -28,6 +28,7 @@
 		86A6EA272AFDC42C0099CA55 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA262AFDC42C0099CA55 /* APIError.swift */; };
 		86A6EA2A2AFDFB3B0099CA55 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */; };
 		86A6EA2C2AFE029B0099CA55 /* CancelScreenSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */; };
+		86A6EA2E2AFE03790099CA55 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		86A6EA262AFDC42C0099CA55 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelScreenSuccess.swift; sourceTree = "<group>"; };
+		86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				8614FB112AFB2D1900B5E112 /* RegisterScreen.swift */,
 				8614FAE92AFB2C4F00B5E112 /* HomeScreen.swift */,
 				86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */,
+				86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				8614FAEA2AFB2C4F00B5E112 /* HomeScreen.swift in Sources */,
 				8614FB122AFB2D1900B5E112 /* RegisterScreen.swift in Sources */,
 				8614FB182AFC911600B5E112 /* StringExtension.swift in Sources */,
+				86A6EA2E2AFE03790099CA55 /* RegistrationSuccess.swift in Sources */,
 				86A6EA2C2AFE029B0099CA55 /* CancelScreenSuccess.swift in Sources */,
 				86A6EA232AFDC2CF0099CA55 /* UserRegistration.swift in Sources */,
 				86A6EA132AFDAF1D0099CA55 /* ViewExtension.swift in Sources */,

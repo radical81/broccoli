@@ -29,15 +29,8 @@ struct RegisterScreen: View {
       sendButton
     }
     .sheet(isPresented: $showSuccess, onDismiss: { dismiss() }) {
-      success
+      RegistrationSuccess()
     }
-  }
-  
-  /// Display success view
-  var success: some View {
-    Text("Registration successful!")
-      .font(.title)
-      .foregroundColor(.darkGreen)
   }
 
   /// Display errors if any, after submitting the form.
