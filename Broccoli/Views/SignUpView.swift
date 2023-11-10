@@ -4,14 +4,43 @@ struct SignUpView: View {
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
-  
+  var validator: RequestInviteValidator {
+    RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
+  }
   var body: some View {
     VStack {
+      errors
       form
       sendButton
     }
   }
   
+  
+  var errors: some View {
+    VStack {
+      if !validator.isValidName {
+        Text("The name is too short.")
+          .font(.callout)
+          .foregroundColor(.red)
+      }
+      if !validator.isValidEmailAddress {
+        Text("Email address is not valid.")
+          .font(.callout)
+          .foregroundColor(.red)
+      }
+      if !validator.isValidConfirmEmailAddress {
+        Text("Confirm email address is not valid.")
+          .font(.callout)
+          .foregroundColor(.red)
+      }
+      if !validator.emailAddressesMatch {
+        Text("Email addresses don't match.")
+          .font(.callout)
+          .foregroundColor(.red)
+      }
+    }
+  }
+
   var nameField: some View {
     HStack {
       Label("", systemImage: "person")
