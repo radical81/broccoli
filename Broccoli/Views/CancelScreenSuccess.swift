@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Cancellation success screen.
 struct CancelScreenSuccess: View {
   // MARK: - View
   var body: some View {
