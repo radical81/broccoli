@@ -17,12 +17,12 @@ struct RequestInviteValidator {
   let minimumNameLength = 3
 
   /// True if the name input is valid
-  private var isValidName: Bool {
+  var isValidName: Bool {
     name.hasMinimum(minimumNameLength)
   }
   
   /// True if the email input is valid
-  private func isValidEmailAddress(_ emailAddress: String) -> Bool {
+  func isValidEmailAddress(_ emailAddress: String) -> Bool {
     emailAddress.isValidEmail
   }
   
