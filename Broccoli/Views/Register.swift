@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// This view displays the request for invite form.
-struct SignUpView: View {
+struct Register: View {
   // MARK: - Properties
   let registrar: Registration?
 
@@ -177,8 +177,8 @@ struct SignUpView: View {
   }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct Register_Previews: PreviewProvider {
   static var previews: some View {
-    SignUpView(registrar: nil)
+    Register(registrar: nil)
   }
 }
