@@ -9,7 +9,11 @@ struct HomeScreen: View {
     VStack(spacing: 20) {
       Spacer()
       title
-      registerButton
+      if isRegistered {
+        cancelButton
+      } else {
+        registerButton
+      }
       Spacer()
     }
     .sheet(isPresented: $presentInvite) {
@@ -33,6 +37,16 @@ struct HomeScreen: View {
     .buttonStyle(.borderedProminent)
     .tint(.darkGreen)
     .accessibilityIdentifier("requestInviteButton")
+  }
+  
+  /// The cancellation button to cancel the invite.
+  var cancelButton: some View {
+    Button("Cancel the invite") {
+      presentCancel.toggle()
+    }
+    .buttonStyle(.borderedProminent)
+    .tint(.red)
+    .accessibilityIdentifier("cancelInviteButton")
   }
 }
 
