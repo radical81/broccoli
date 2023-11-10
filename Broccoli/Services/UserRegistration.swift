@@ -7,7 +7,7 @@ struct UserRegistration: Registration {
     guard let url = URL(string: "https://us-central1-blinkapp-684c1.cloudfunctions.net/fakeAuth") else {
       return .failed(APIError.malformed("Invalid URL format."))
     }
-    var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+    let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
     let decoder = JSONDecoder()
     var dataResponse: (Data, URLResponse)?
     do {
