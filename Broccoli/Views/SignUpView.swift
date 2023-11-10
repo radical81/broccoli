@@ -60,11 +60,15 @@ struct SignUpView: View {
   
   var sendButton: some View {
     Button("Send") {
-      
+      sendFormRequest()
     }
     .buttonStyle(.borderedProminent)
     .tint(.darkGreen)
     .accessibilityIdentifier("sendButton")
+  }
+  
+  func sendFormRequest() {
+    
   }
 }
 
