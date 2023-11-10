@@ -3,9 +3,12 @@ import SwiftUI
 /// This view represents the home screen.
 struct HomeScreen: View {
   @State var presentInvite: Bool = false
-  @State var presentCancel: Bool = false
+  @State var presentCancelConfirm: Bool = false
+  @State var presentCancelSuccess: Bool = false
   @State var refresh: Bool = false
 
+  // MARK: - Views
+  @ViewBuilder
   var body: some View {
     VStack(spacing: 20) {
       Spacer()
@@ -17,8 +20,22 @@ struct HomeScreen: View {
       }
       Spacer()
     }
-    .sheet(isPresented: $presentInvite, onDismiss: { refresh.toggle() }) {
+    .sheet(isPresented: $presentInvite, onDismiss: {
+      refresh.toggle()
+    }) {
       RegisterScreen(registrar: UserRegistration())
+    }
+    .sheet(isPresented: $presentCancelSuccess, onDismiss: { refresh.toggle() }) {
+      CancelScreenSuccess()
+    }
+    .confirmationDialog(
+      "Are you sure you want to cancel the invite?",
+      isPresented: $presentCancelConfirm
+    ) {
+      Button("Yes") {
+        cancelInvite()
+        presentCancelSuccess.toggle()
+      }
     }
   }
   
@@ -48,11 +65,16 @@ struct HomeScreen: View {
   /// The cancellation button to cancel the invite.
   var cancelButton: some View {
     Button("Cancel the invite") {
-      presentCancel.toggle()
+      presentCancelConfirm.toggle()
     }
     .buttonStyle(.borderedProminent)
     .tint(.red)
     .accessibilityIdentifier("cancelInviteButton")
+  }
+  
+  // MARK: - Methods
+  func cancelInvite() {
+    LocalStore.cancel()
   }
 }
 

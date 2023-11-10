@@ -14,4 +14,9 @@ struct LocalStore {
   static func register() {
     UserDefaults.standard.set(true, forKey: key)
   }
+  
+  /// Cancel the registration.
+  static func cancel() {
+    UserDefaults.standard.set(false, forKey: key)
+  }
 }
