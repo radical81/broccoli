@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8614FAE82AFB2C4F00B5E112 /* BroccoliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FAE72AFB2C4F00B5E112 /* BroccoliApp.swift */; };
-		8614FAEA2AFB2C4F00B5E112 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FAE92AFB2C4F00B5E112 /* MainScreen.swift */; };
+		8614FAEA2AFB2C4F00B5E112 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FAE92AFB2C4F00B5E112 /* HomeScreen.swift */; };
 		8614FAEC2AFB2C5000B5E112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8614FAEB2AFB2C5000B5E112 /* Assets.xcassets */; };
 		8614FAEF2AFB2C5000B5E112 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8614FAEE2AFB2C5000B5E112 /* Preview Assets.xcassets */; };
 		8614FB032AFB2C5100B5E112 /* BroccoliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8614FB022AFB2C5100B5E112 /* BroccoliUITests.swift */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		8614FAE42AFB2C4F00B5E112 /* Broccoli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Broccoli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8614FAE72AFB2C4F00B5E112 /* BroccoliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroccoliApp.swift; sourceTree = "<group>"; };
-		8614FAE92AFB2C4F00B5E112 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		8614FAE92AFB2C4F00B5E112 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		8614FAEB2AFB2C5000B5E112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8614FAEE2AFB2C5000B5E112 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8614FAF42AFB2C5100B5E112 /* BroccoliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroccoliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				8614FB112AFB2D1900B5E112 /* SignUpView.swift */,
-				8614FAE92AFB2C4F00B5E112 /* MainScreen.swift */,
+				8614FAE92AFB2C4F00B5E112 /* HomeScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8614FAEA2AFB2C4F00B5E112 /* MainScreen.swift in Sources */,
+				8614FAEA2AFB2C4F00B5E112 /* HomeScreen.swift in Sources */,
 				8614FB122AFB2D1900B5E112 /* SignUpView.swift in Sources */,
 				8614FB182AFC911600B5E112 /* StringExtension.swift in Sources */,
 				86A6EA232AFDC2CF0099CA55 /* UserRegistration.swift in Sources */,

@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// This view represents the home screen.
-struct MainScreen: View {
+struct HomeScreen: View {
   @State var presentInvite: Bool = false
   @State var presentCancel: Bool = false
 
@@ -36,8 +36,8 @@ struct MainScreen: View {
   }
 }
 
-struct MainScreen_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
   static var previews: some View {
-    MainScreen()
+    HomeScreen()
   }
 }

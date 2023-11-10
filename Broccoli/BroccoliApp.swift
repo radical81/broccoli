@@ -11,7 +11,7 @@ import SwiftUI
 struct BroccoliApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            HomeScreen()
         }
     }
 }
