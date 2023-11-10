@@ -1,14 +1,18 @@
 import SwiftUI
 
 struct SignUpView: View {
+  // MARK:- State variables
   @State var name: String = ""
   @State var email: String = ""
   @State var confirmEmail: String = ""
   @State var showErrors: Bool = false
   
+  // MARK:- Computed Properties
   var validator: RequestInviteValidator {
     RequestInviteValidator(name: name, email: email, confirmEmail: confirmEmail)
   }
+  
+  // MARK:- View
   var body: some View {
     VStack {
       errors
@@ -17,7 +21,6 @@ struct SignUpView: View {
       sendButton
     }
   }
-  
   
   var errors: some View {
     VStack {
@@ -99,6 +102,7 @@ struct SignUpView: View {
     .accessibilityIdentifier("sendButton")
   }
   
+  // MARK:- Methods
   func sendFormRequest() {
     showErrors = true
     if validator.isValidRequestAnInvite {
