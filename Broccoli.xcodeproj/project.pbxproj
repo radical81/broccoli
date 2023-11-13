@@ -29,6 +29,7 @@
 		86A6EA2A2AFDFB3B0099CA55 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */; };
 		86A6EA2C2AFE029B0099CA55 /* CancelScreenSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */; };
 		86A6EA2E2AFE03790099CA55 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */; };
+		86FCC3BB2B01CA6100D769DB /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 86FCC3BA2B01CA6100D769DB /* ConfettiSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FCC3BB2B01CA6100D769DB /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +256,9 @@
 			dependencies = (
 			);
 			name = Broccoli;
+			packageProductDependencies = (
+				86FCC3BA2B01CA6100D769DB /* ConfettiSwiftUI */,
+			);
 			productName = Broccoli;
 			productReference = 8614FAE42AFB2C4F00B5E112 /* Broccoli.app */;
 			productType = "com.apple.product-type.application";
@@ -326,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 8614FADB2AFB2C4F00B5E112;
+			packageReferences = (
+				86FCC3B92B01CA6100D769DB /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 8614FAE52AFB2C4F00B5E112 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -713,6 +721,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86FCC3B92B01CA6100D769DB /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86FCC3BA2B01CA6100D769DB /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86FCC3B92B01CA6100D769DB /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8614FADC2AFB2C4F00B5E112 /* Project object */;
 }
