@@ -76,6 +76,7 @@
 		86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelScreenSuccess.swift; sourceTree = "<group>"; };
 		86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
+		86FCC3BC2B01CE5500D769DB /* use-async-await.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "use-async-await.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				86A6EA152AFDB3060099CA55 /* swiftui-programmatic-views.md */,
+				86FCC3BC2B01CE5500D769DB /* use-async-await.md */,
 			);
 			path = "Architecture Decisions";
 			sourceTree = "<group>";
