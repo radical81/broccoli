@@ -32,7 +32,8 @@ struct HomeScreen: View {
     }
     .confirmationDialog(
       "Are you sure you want to cancel the invite?",
-      isPresented: $presentCancelConfirm
+      isPresented: $presentCancelConfirm,
+      titleVisibility: .visible
     ) {
       Button("Yes") {
         cancelInvite()
