@@ -5,7 +5,8 @@ struct HomeScreen: View {
   @State var presentInvite: Bool = false
   @State var presentCancelConfirm: Bool = false
   @State var presentCancelSuccess: Bool = false
-  @State var refresh: Bool = false
+  /// True if the user is registered.
+  @State var isRegistered: Bool = LocalStore.isRegistered
 
   // MARK: - Views
   @ViewBuilder
@@ -21,11 +22,12 @@ struct HomeScreen: View {
       Spacer()
     }
     .sheet(isPresented: $presentInvite, onDismiss: {
-      refresh.toggle()
+      isRegistered = LocalStore.isRegistered
     }) {
       RegisterScreen(registrar: UserRegistration())
     }
-    .sheet(isPresented: $presentCancelSuccess, onDismiss: { refresh.toggle() }) {
+    .sheet(isPresented: $presentCancelSuccess, onDismiss: { isRegistered = LocalStore.isRegistered
+    }) {
       CancelScreenSuccess()
     }
     .confirmationDialog(
@@ -37,11 +39,6 @@ struct HomeScreen: View {
         presentCancelSuccess.toggle()
       }
     }
-  }
-  
-  /// True if the user is registered.
-  var isRegistered: Bool {
-    LocalStore.isRegistered
   }
   
   /// The main home screen title.

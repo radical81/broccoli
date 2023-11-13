@@ -1,22 +1,17 @@
-import Foundation
+import SwiftUI
 
 /// Convenience functions for managing local store.
 struct LocalStore {
-  /// The key to store if user has already registered.
-  static let key = "registered"
-
-  /// True if email is already registered.
-  static var isRegistered: Bool {
-     UserDefaults.standard.bool(forKey: key)
-  }
+  /// True if the user is already registered.
+   @AppStorage("registered", store: .standard) static var isRegistered: Bool = false
   
   /// Mark the user as registered.
   static func register() {
-    UserDefaults.standard.set(true, forKey: key)
+    isRegistered = true
   }
   
   /// Cancel the registration.
   static func cancel() {
-    UserDefaults.standard.set(false, forKey: key)
+    isRegistered = false
   }
 }
