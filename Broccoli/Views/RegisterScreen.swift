@@ -29,7 +29,7 @@ struct RegisterScreen: View {
       sendButton
     }
     .sheet(isPresented: $showSuccess, onDismiss: { dismiss() }) {
-      RegistrationSuccess()
+      RegistrationSuccess(registrar: registrar)
     }
   }
 
