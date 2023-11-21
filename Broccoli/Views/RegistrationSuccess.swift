@@ -26,18 +26,33 @@ struct RegistrationSuccess: View {
     }
   }
   
+  /// Filtered users by search text
+  var filteredUsers: [User] {
+    guard let userList = users.value else {
+      return []
+    }
+    guard !searchText.isEmpty else {
+      return userList
+    }
+    return userList.filter {$0.name.contains(searchText)}
+  }
+
   @ViewBuilder
   var userList: some View {
     switch users {
-    case .loaded(let userList):
-      let filteredUsers = userList.filter {$0.name == searchText}
+    case .loaded(_):
       NavigationView {
-        List(filteredUsers) {
-          Text($0.name)
+        VStack {
+          Text("Registered Users:")
+            .font(.subheadline)
+          List(filteredUsers) {
+            Text($0.name)
+          }
         }
       }
-      .searchable(text: $searchText)
-    default: EmptyView()
+      .searchable(text: $searchText, prompt: "Filter users by name")
+    default:
+      EmptyView()
     }
   }
   
