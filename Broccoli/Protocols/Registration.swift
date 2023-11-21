@@ -4,4 +4,6 @@ import Foundation
 protocol Registration {
   /// Register the user.
   func register(_ person: Person) async -> Loadable<Response>
+  /// Retrieve existing users
+  func registeredUsers() async -> Loadable<[User]>
 }
