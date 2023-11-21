@@ -29,6 +29,7 @@
 		86A6EA2A2AFDFB3B0099CA55 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */; };
 		86A6EA2C2AFE029B0099CA55 /* CancelScreenSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */; };
 		86A6EA2E2AFE03790099CA55 /* RegistrationSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */; };
+		86F7134E2B0C1C0100ABD8FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F7134D2B0C1C0100ABD8FE /* User.swift */; };
 		86FCC3BB2B01CA6100D769DB /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 86FCC3BA2B01CA6100D769DB /* ConfettiSwiftUI */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		86A6EA292AFDFB3B0099CA55 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		86A6EA2B2AFE029B0099CA55 /* CancelScreenSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelScreenSuccess.swift; sourceTree = "<group>"; };
 		86A6EA2D2AFE03790099CA55 /* RegistrationSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccess.swift; sourceTree = "<group>"; };
+		86F7134D2B0C1C0100ABD8FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		86FCC3BC2B01CE5500D769DB /* use-async-await.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "use-async-await.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 			children = (
 				86A6EA1A2AFDBB9E0099CA55 /* Response.swift */,
 				86A6EA202AFDC2610099CA55 /* Person.swift */,
+				86F7134D2B0C1C0100ABD8FE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				86A6EA182AFDB8FD0099CA55 /* Loadable.swift in Sources */,
 				86A6EA0F2AFDA5F40099CA55 /* RequestInviteValidator.swift in Sources */,
 				86A6EA1F2AFDC20F0099CA55 /* Registration.swift in Sources */,
+				86F7134E2B0C1C0100ABD8FE /* User.swift in Sources */,
 				86A6EA252AFDC3C10099CA55 /* ErrorWithMessage.swift in Sources */,
 				8614FB162AFB32F000B5E112 /* ShapeStyleExtension.swift in Sources */,
 				86A6EA272AFDC42C0099CA55 /* APIError.swift in Sources */,
